@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import Switcher from './components/Switcher'
+import Modal from './components/Modal/Modal'
 import sad from './components/sad.png';
 import smile from './components/smile.png';
 
@@ -28,6 +29,8 @@ class App extends React.Component {
     return (
       <div className={moodText}>
         <Switcher changeParentBackground={this.changeBgc} moodText={moodText} url={url[moodText]} />
+
+        <Modal />
       </div>
     );
   }

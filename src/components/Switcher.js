@@ -2,10 +2,6 @@ import React from "react";
 import './Switcher.css';
 
 class Switcher extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     clickHander = () => {
         this.props.changeParentBackground();
     }
@@ -16,7 +12,7 @@ class Switcher extends React.Component {
 
         return (
             <div className={cn}>
-                <img src={this.props.url} />
+                <img src={this.props.url} alt="alt" />
                 <h1>I am {mood}</h1>
                 <button onClick={this.clickHander}>Click me!</button>
             </div>
