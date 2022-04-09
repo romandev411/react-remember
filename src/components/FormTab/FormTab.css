@@ -1,0 +1,38 @@
+.form-tab {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(128, 128, 128);
+}
+
+.form-tab__item {
+    margin: auto;
+    background: rgba(19, 35, 47, 0.9);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-tab__btn {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+    border: none;
+}
+
+.form-tab__btn.active {
+    background: #1ab188;
+    color: #fff;
+}
+
+.form-tab__tabs {
+    display: flex;
+}

@@ -1,76 +1,25 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Components from './pages/Components/Components';
+import FormAuth from './pages/FormAuth/FormAuth';
 import './App.css';
-import Switcher from './components/Switcher'
-import Modal from './components/Modal/Modal'
-import Modal2 from './components/Modal2/Modal2'
-import Timer from './components/Timer/Timer'
-import Form from './components/Form/Form'
-import ConvertForm from './components/ConvertForm/ConvertForm'
-
-import sad from './components/sad.png';
-import smile from './components/smile.png';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      moodText: 'smile',
-      url: {
-        sad,
-        smile,
-      },
-      isModal2: false,
-    }
-  }
-
-  changeBgc = () => {
-    this.setState({
-      moodText: this.state.moodText === 'smile' ? 'sad' : 'smile',
-    })
-  }
-
-  toggleModal2 = () => {
-    this.setState({
-      isModal2: !this.state.isModal2,
-    });
-  }
-
-  resultModal2 = (result) => {
-    console.log(result)
-    this.toggleModal2();
-  }
 
   render() {
-    const { moodText, url, isModal2 } = this.state;
-
     return (
-      <div className={moodText}>
-        <Switcher changeParentBackground={this.changeBgc} moodText={moodText} url={url[moodText]} />
+      <Router>
+        <Header ></Header>
 
-        <hr />
+        <Routes>
+          <Route path="/" element={<Components />} />
 
-        <Modal />
-
-        <hr />
-
-        {
-          isModal2 ? <Modal2 resultModal={this.resultModal2} /> : null
-        }
-
-        <Timer />
-
-        <hr />
-
-        <button onClick={this.toggleModal2}>Open Modal2</button>
-
-        <hr />
-
-        <Form />
-
-        <hr />
-        
-        <ConvertForm />
-      </div>
+          <Route path="/form-tab/*" element={<FormAuth />}>
+            
+          </Route>
+        </Routes>
+      </Router>
     );
   }
 }
