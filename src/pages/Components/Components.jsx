@@ -5,6 +5,7 @@ import Modal2 from '../../components/Modal2/Modal2'
 import Timer from '../../components/Timer/Timer'
 import Form from '../../components/Form/Form'
 import ConvertForm from '../../components/ConvertForm/ConvertForm'
+import GradientBtn from '../../components/GradientBtn/GradientBtn'
 
 import sad from '../../components/Switcher/sad.png';
 import smile from '../../components/Switcher/smile.png';
@@ -69,6 +70,10 @@ class Components extends React.Component {
         <hr />
 
         <ConvertForm />
+
+        <hr />
+
+        <GradientBtn />
       </div>
     );
   }
