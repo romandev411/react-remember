@@ -1,4 +1,4 @@
-import style from './GradientBtn.module.css';
+import style from './GradientBtn.module.scss';
 import React, { useState } from 'react';
 import cx from 'classnames';
 
@@ -11,7 +11,7 @@ export default () => {
 
     return (
         <button
-            className={cx(style.GradientBtn, { [style.active]: active })}
+            className={cx(style.GradientBtn, {[style.active]: active })}
             type="button"
             onClick={changeBtn}
         >
