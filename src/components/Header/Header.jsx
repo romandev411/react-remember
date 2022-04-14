@@ -1,25 +1,27 @@
 import { NavLink } from 'react-router-dom';
 
-export default function Header() {
-    return (
-        <header className="header">
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to={'/'}>Components</NavLink>
-                    </li>
+export default function Header () {
+  return (
+    <header className='header'>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to={'/'}>Components</NavLink>
+          </li>
 
-                    <li>
-                        <NavLink to={'/form-tab'}>form</NavLink>
-                    </li>
+          <li>
+            <NavLink to={'/form-tab'}>form</NavLink>
+          </li>
 
-                    <li>
-                        <NavLink to={'/form-tab/login'}>Log in</NavLink>
-                    </li>
-                </ul>
+          <li>
+            <NavLink to={'/form-tab/login'}>Log in</NavLink>
+          </li>
 
-
-            </nav>
-        </header>
-    )
+          <li>
+            <NavLink to={'/users'}>Users</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 }

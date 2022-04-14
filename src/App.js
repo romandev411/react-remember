@@ -1,23 +1,22 @@
-import React from "react";
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Components from './pages/Components/Components';
 import FormAuth from './pages/FormAuth/FormAuth';
+import Users from './pages/Users/Users';
 import './App.css';
 
 class App extends React.Component {
-
-  render() {
+  render () {
     return (
       <Router>
-        <Header ></Header>
+        <Header></Header>
 
         <Routes>
-          <Route path="/" element={<Components />} />
+          <Route path='/' element={<Components />} />
 
-          <Route path="/form-tab/*" element={<FormAuth />}>
-            
-          </Route>
+          <Route path='/form-tab/*' element={<FormAuth />}></Route>
+          <Route path='/users' element={<Users />}></Route>
         </Routes>
       </Router>
     );
@@ -25,3 +24,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// npx prettier-standard --format
