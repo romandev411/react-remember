@@ -6,6 +6,8 @@ import Timer from '../../components/Timer/Timer';
 import Form from '../../components/Form/Form';
 import ConvertForm from '../../components/ConvertForm/ConvertForm';
 import GradientBtn from '../../components/GradientBtn/GradientBtn';
+import Windowsizes from '../../components/WindowSizes/WindowSizes';
+import Counter from '../../components/Counter/Counter';
 
 import sad from '../../components/Switcher/sad.png';
 import smile from '../../components/Switcher/smile.png';
@@ -17,21 +19,21 @@ class Components extends React.Component {
       moodText: 'smile',
       url: {
         sad,
-        smile
+        smile,
       },
-      isModal2: false
+      isModal2: false,
     };
   }
 
   changeBgc = () => {
     this.setState({
-      moodText: this.state.moodText === 'smile' ? 'sad' : 'smile'
+      moodText: this.state.moodText === 'smile' ? 'sad' : 'smile',
     });
   };
 
   toggleModal2 = () => {
     this.setState({
-      isModal2: !this.state.isModal2
+      isModal2: !this.state.isModal2,
     });
   };
 
@@ -76,6 +78,14 @@ class Components extends React.Component {
         <hr />
 
         <GradientBtn text={'GradientBtn'} />
+
+        <hr />
+
+        <Windowsizes />
+
+        <hr />
+
+        <Counter />
       </div>
     );
   }

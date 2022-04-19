@@ -1,13 +1,13 @@
-import style from './GradientBtn.module.scss'
-import React, { useState } from 'react'
-import cx from 'classnames'
-import PropTypes from 'prop-types'
+import style from './GradientBtn.module.scss';
+import React, { useState } from 'react';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
 
 const GradientBtn = props => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
 
   function changeBtn () {
-    setActive(!active)
+    setActive(!active);
   }
 
   return (
@@ -16,13 +16,13 @@ const GradientBtn = props => {
       type='button'
       onClick={changeBtn}
     >
-      {props.name}
+      {props.text}
     </button>
-  )
-}
+  );
+};
 
 GradientBtn.propTypes = {
-  text: PropTypes.string
-}
+  text: PropTypes.string,
+};
 
-export default GradientBtn
+export default GradientBtn;
