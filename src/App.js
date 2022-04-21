@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Components from './pages/Components/Components';
 import FormAuth from './pages/FormAuth/FormAuth';
 import Users from './pages/Users/Users';
+import ProviderPage from './pages/ProviderPage/ProviderPage';
 import './App.css';
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
 
           <Route path='/form-tab/*' element={<FormAuth />}></Route>
           <Route path='/users' element={<Users />}></Route>
+          <Route path='/provider-page' element={<ProviderPage />}></Route>
         </Routes>
       </Router>
     );

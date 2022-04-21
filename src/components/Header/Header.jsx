@@ -20,6 +20,10 @@ export default function Header () {
           <li>
             <NavLink to={'/users'}>Users</NavLink>
           </li>
+
+          <li>
+            <NavLink to={'/provider-page'}>provider-page</NavLink>
+          </li>
         </ul>
       </nav>
     </header>
